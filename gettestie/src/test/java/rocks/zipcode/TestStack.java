@@ -181,4 +181,21 @@ public class TestStack {
         list.remove("a");
         Assert.assertEquals("b", list.getFirst());
     }
+
+    // Test PriorityQueue
+    @Test
+    public void testPeek(){
+        PriorityQueue<String> q = new PriorityQueue<>();
+        q.add("a");
+        q.add("b");
+        Assert.assertEquals("a", q.peek());
+    }
+
+    @Test
+    public void testPoll(){
+        PriorityQueue<String> q = new PriorityQueue<>();
+        q.add("a");
+        q.add("b");
+        Assert.assertEquals("a", q.poll());
+    }
 }
