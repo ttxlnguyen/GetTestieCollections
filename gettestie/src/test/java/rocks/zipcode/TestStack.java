@@ -243,4 +243,21 @@ public class TestStack {
         t.put("a", "c");
         Assert.assertEquals("a", t.firstKey());
     }
+
+    // Test TreeSet
+    @Test
+    public void testTreeSetFirst(){
+        TreeSet<String> t = new TreeSet<>();
+        t.add("b");
+        t.add("a");
+        Assert.assertEquals("a", t.first());
+    }
+
+    @Test
+    public void testTreeSetLast(){
+        TreeSet<String> t = new TreeSet<>();
+        t.add("b");
+        t.add("a");
+        Assert.assertEquals("b", t.last());
+    }
 }
