@@ -6,6 +6,7 @@ import org.junit.Test;
 import static org.junit.Assert.*;
 
 import java.util.ArrayDeque;
+import java.util.ArrayList;
 import java.util.Deque;
 import java.util.Stack;
 
@@ -43,5 +44,28 @@ public class TestStack {
         deque.addFirst("first");
         deque.addLast("last");
         Assert.assertEquals("last", deque.getLast());
+    }
+
+    // Test ArrayList
+    @Test
+    public void testArrayListAdd(){
+        ArrayList<String> list = new ArrayList<>();
+        list.add("add");
+        Assert.assertTrue(list.contains("add"));
+    }
+
+    @Test
+    public void testArrayListRemove(){
+        ArrayList<String> list = new ArrayList<>();
+        list.add("add");
+        list.remove("add");
+        Assert.assertTrue(list.isEmpty());
+    }
+
+    @Test
+    public void testArrayListSize(){
+        ArrayList<String> list = new ArrayList<>();
+        list.add("add");
+        Assert.assertEquals(1, list.size());
     }
 }
