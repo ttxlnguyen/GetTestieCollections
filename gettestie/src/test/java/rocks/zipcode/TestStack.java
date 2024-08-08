@@ -198,4 +198,33 @@ public class TestStack {
         q.add("b");
         Assert.assertEquals("a", q.poll());
     }
+
+    // Test Stack
+    @Test
+    public void testPush() {
+        Stack<String> stack = new Stack<>();
+        stack.push("Hello world");
+        assertEquals(false, stack.isEmpty()); // false
+    }
+
+    @Test
+    public void testPop(){
+        Stack<String> stack = new Stack<>();
+        stack.push("popped");
+        stack.pop();
+        assertEquals(true, stack.isEmpty());
+    }
+
+    @Test
+    public void testStackPeek(){
+        Stack<String> stack = new Stack<>();
+        stack.push("peek");
+        assertEquals("peek", stack.peek());
+    }
+
+    @Test
+    public void isEmpty(){
+        Stack<String> stack = new Stack<>();
+        assertTrue(stack.isEmpty());
+    }
 }
